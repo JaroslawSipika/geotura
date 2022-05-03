@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <title>GeoTur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="AdminZdjeciaDodaj.js"></script>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="GeoTur&nbsp;&nbsp;​, Panel Użytkownika">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>UzytkownikZdjeciaDodaj</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="AdminZdjeciaDodaj.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.17.5, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "GeoTur",
+		"sameAs": []
+}</script>
+    <meta property="og:title" content="UzytkownikZdjeciaDodaj">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+  </head>
+  <body class="u-body u-overlap">
+    <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_4aeb" data-image-width="1280" data-image-height="720">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-grey-75 u-text-1" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">GeoTur&nbsp;&nbsp; </h1>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="carousel_79db">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-custom-color-1 u-text-1">DODAJ ZDJĘCIA</h2><span class="u-align-left u-border-2 u-border-custom-color-1 u-file-icon u-icon u-icon-circle u-spacing-10 u-text-palette-1-base u-icon-1"><img src="images/zdjecie.jpg" alt=""></span>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="49.5%">
+              <col width="50.5%">
+            </colgroup>
+            <thead class="u-grey-50 u-table-header u-table-header-1">
+              <tr style="height: 46px;">
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-1">Wybierz trase</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-2"><select id="Name">
+                  <option selected>-select-</option>
+                </select></th>
+              </tr>
+            </thead>
+            <tbody class="u-table-body">
+              <tr style="height: 75px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Załaduj zdjęcia </td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><input type="file" id="files" multiple /><p id="uploading"></p>
+                  <progress value="0" max="100" id="progress"></progress><br/><button id="send">Wyślij</button></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td ><input type="hidden" id="link"/></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td ><input type="hidden" id="urlalbumu"/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a id="wyloguj"  class="u-active-black u-align-center u-btn u-button-style u-custom-color-1 u-hover-black u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">WYLOGUJ</a>
+        <a id="mojeZdjecia"  class="u-active-black u-align-center u-btn u-button-style u-custom-color-1 u-hover-black u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">MOJE ZDJĘCIA</a>
+        <a id="stronaGlowna" class="u-active-black u-align-center u-btn u-button-style u-custom-color-1 u-hover-black u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-3">STRONA GŁÓWNA</a>
+      </div>
+    </section>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCydQwNGCWpjYlbgbuB9VJlhCzMHzrRkxM",
+        authDomain: "photo-album-87dae.firebaseapp.com",
+        projectId: "photo-album-87dae",
+        storageBucket: "photo-album-87dae.appspot.com",
+        messagingSenderId: "672701209895",
+        appId: "1:672701209895:web:adf6dee4039b5775121d02"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+      var files = [];
+      var place
+      document.getElementById("files").addEventListener("change", function(e) {
+        files = e.target.files;
+        for (let i = 0; i < files.length; i++) {
+          console.log(files[i]);
+        }
+      });
+
+      document.getElementById("send").addEventListener("click", function() {
+        //checks if files are selected
+        if (files.length != 0) {
+          //Loops through all the selected files
+          for (let i = 0; i < files.length; i++) {
+            //create a storage reference
+            place = document.getElementById("link").value;
+            var storage = firebase.storage().ref(`${place}/${files[i].name}`);
+
+
+
+
+            //upload file
+            var upload = storage.put(files[i]);
+
+            //update progress bar
+            upload.on(
+                    "state_changed",
+                    function progress(snapshot) {
+                      var percentage =
+                              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                      document.getElementById("progress").value = percentage;
+                    },
+
+                    function error() {
+                      alert("error uploading file");
+                    },
+
+                    function complete() {
+                      document.getElementById(
+                              "uploading"
+                      ).innerHTML += `${files[i].name} uploaded <br />`;
+
+                      getFileUrl(`${place}/${files[i].name}`);
+
+
+                    }
+            );
+          }
+        } else {
+          alert("No file chosen");
+        }
+      });
+
+      function getFileUrl(filename) {
+        //create a storage reference
+        var storage = firebase.storage().ref(filename);
+        //get file url
+        storage
+                .getDownloadURL()
+                .then(function(url) {
+                  document.getElementById("urlalbumu").value = url
+                  console.log(url);
+                  zapisz();
+
+                })
+                .catch(function(error) {
+                  console.log("error encountered");
+                });
+      }
+    </script>
+
+
+
+    <footer class="u-clearfix u-custom-color-1 u-footer" id="sec-52b8"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-social-icons u-spacing-13 u-social-icons-1">
+        </div>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+    </section>
+  </body>
+</html>

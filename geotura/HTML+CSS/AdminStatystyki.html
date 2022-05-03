@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <title>GeoTur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="AdminStatystyki.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="GeoTur&nbsp;&nbsp;​, Panel Użytkownika">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>AdminStatystyki</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="AdminStatystyki.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.17.5, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "GeoTur",
+		"sameAs": []
+}</script>
+    <meta property="og:title" content="UzytkownikStatystyki">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+  </head>
+  <body class="u-body u-overlap">
+    <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_4aeb" data-image-width="1280" data-image-height="720">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-custom-font u-font-ubuntu u-text u-text-grey-75 u-text-1" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">GeoTur&nbsp;&nbsp; </h1>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="carousel_79db">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-custom-color-1 u-text-1">STATYSTYKI</h2><span class="u-align-left u-border-2 u-border-custom-color-1 u-file-icon u-icon u-icon-circle u-spacing-10 u-text-palette-1-base u-icon-1"><img src="images/statystyki.jpg" alt=""></span>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="50%">
+              <col width="50%">
+            </colgroup>
+            <thead class="u-grey-50 u-table-header u-table-header-1">
+              <tr style="height: 46px;">
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-1">Osiągnięcia</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-2">Wynik</th>
+              </tr>
+            </thead>
+            <tbody class="u-table-body">
+              <tr style="height: 75px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Ilość tras</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctras"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Suma kilometrów</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="sumakilometrow"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Najwyższy punkt</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="najwyzszypunkt"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Najdłuższa trasa</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="najdluzszatrasa"></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="u-expanded-width u-table u-table-responsive u-table-2">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="16.5%">
+              <col width="16.5%">
+              <col width="16.9%">
+              <col width="16%">
+              <col width="17.6%">
+              <col width="16.5%">
+            </colgroup>
+            <thead class="u-grey-50 u-table-header u-table-header-2">
+              <tr style="height: 46px;">
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-11">Łańcuchy górskie</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-12">Ilość tras w bazie</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-13">Ilość tras zaplanowanych wszystkich</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-14">Ilość tras przebytych wszystkich</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-15">Przebyty dystans [km]</th>
+                <th class="u-border-1 u-border-grey-50 u-custom-color-1 u-table-cell u-table-cell-16">Całkowity czas</th>
+              </tr>
+            </thead>
+            <tbody class="u-table-body">
+              <tr style="height: 75px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Tatry</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatry"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryd"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryc"></p></td>
+              </tr>
+              <tr style="height: 75px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Tatry Zachodnie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryzachodnie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryzachodniez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryzachodnieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryzachodnied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrastatryzachodniec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Pieniny</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraspieniny"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraspieninyz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraspieninyu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraspieninyd"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraspieninyc"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Śląski</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidslaski"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidslaskiz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidslaskiu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidslaskid"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidslaskic"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Mały</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmaly"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmalyz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmalyu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmalyd"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmalyc"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Żywiecki</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidzywiecki"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidzywieckiz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidzywieckiu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidzywieckid"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidzywieckic"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Gorce</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorce"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorcez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorceu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorced"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorcec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Sądecki</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidsadecki"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidsadeckiz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidsadeckiu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidsadeckid"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidsadeckic"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Niski</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidniski"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidniskiz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidniskiu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidniskid"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidniskic"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Makowski</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmakowski"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmakowskiz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmakowskiu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmakowskid"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidmakowskic"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Beskid Wyspowy</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidwyspowy"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidwyspowyz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidwyspowyu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidwyspowyd"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbeskidwyspowyc"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Bieszczady</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbieszczady"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbieszczadyz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbieszczadyu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbieszczadyd"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasbieszczadyc"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Sanocko-Turczańskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysanockoturczanskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysanockoturczanskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysanockoturczanskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysanockoturczanskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysanockoturczanskiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Izerskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryizerskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryizerskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryizerskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryizerskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryizerskiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Karkonosze</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraskarkonosze"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraskarkonoszez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraskarkonoszeu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraskarkonoszed"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctraskarkonoszec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Kaczawskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykaczawskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykaczawskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykaczawskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykaczawskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykaczawskiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Rudawy Janowickie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasrudawyjanowickie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasrudawyjanowickiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasrudawyjanowickieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasrudawyjanowickied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasrudawyjanowickiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Wałbrzyskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorywalbrzyskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorywalbrzyskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorywalbrzyskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorywalbrzyskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorywalbrzyskiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Kamienne</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykamienne"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykamiennez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykamienneu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykamienned"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorykamiennec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Jastrzębie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryjastrzebie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryjastrzebiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryjastrzebieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryjastrzebied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryjastrzebiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Stołowe</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorystolowe"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorystolowez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorystoloweu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorystolowed"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorystolowec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Orlickie i Bystrzyckie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryorlickieibystrzyckie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryorlickieibystrzyckiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryorlickieibystrzyckieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryorlickieibystrzyckied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryorlickieibystrzyckiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Sowie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysowie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysowiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysowieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysowied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorysowiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Bardzkie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorybardzkie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorybardzkiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorybardzkieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorybardzkied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgorybardzkiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Złote i Bialskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryzloteibialskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryzloteibialskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryzloteibialskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryzloteibialskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryzloteibialskiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Masyw Śnieżnika</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywsnieznika"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywsnieznikaz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywsnieznikau"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywsnieznikad"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywsnieznikac"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Opawskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryopawskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryopawskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryopawskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryopawskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryopawskiec"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Masyw Ślęży</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywslezy"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywslezyz"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywslezyu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywslezyd"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasmasywslezyc"></p></td>
+              </tr>
+              <tr style="height: 76px;">
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">Góry Świętokrzyskie</td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryswietokrzyskie"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryswietokrzyskiez"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryswietokrzyskieu"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryswietokrzyskied"></p></td>
+                <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell"><p id="ilosctrasgoryswietokrzyskiec"></p></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <a id="wyloguj" class="u-active-black u-align-center u-btn u-button-style u-custom-color-1 u-hover-black u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">WYLOGUJ</a>
+        <a id="stronaGlowna" class="u-active-black u-align-center u-btn u-button-style u-custom-color-1 u-hover-black u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">STRONA GŁÓWNA</a>
+      </div>
+    </section>
+    
+    
+    <footer class="u-clearfix u-custom-color-1 u-footer" id="sec-52b8"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-social-icons u-spacing-13 u-social-icons-1">
+        </div>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+    </section>
+  </body>
+</html>
